@@ -4,6 +4,23 @@ A NativeScript-Vue starter that runs on Windows, iOS and Android. Layout uses
 [MasonKit](https://github.com/triniwiz/nativescript-mason) (Flexbox, CSS Grid
 and HTML-style elements), and styling uses Tailwind CSS v4.
 
+## Prerequisites
+
+> NativeScript for Windows is in alpha. Expect rough edges.
+
+To run on Windows you need the following. `npx ns doctor windows` checks them.
+
+| Requirement | Notes |
+| --- | --- |
+| Windows 10 1809 (build 17763) or later | The app targets `net10.0-windows10.0.26100.0`, with a minimum of `10.0.17763.0`. |
+| [Node.js](https://nodejs.org) LTS | Provides `npm` and `npx`. |
+| [.NET 10 SDK](https://dotnet.microsoft.com/download) | The build runs `dotnet build`. Check it with `dotnet --version`. |
+| Developer Mode | Settings → Privacy & security → For developers. Windows needs it to install and launch the unsigned debug build. |
+
+For iOS and Android, follow the [NativeScript environment setup](https://docs.nativescript.org/setup/).
+
+You don't need to install the NativeScript CLI globally. It's a dev dependency, and the npm scripts run it.
+
 ## Getting started
 
 ```bash
@@ -12,6 +29,9 @@ cd my-app
 npm install
 npm run windows   # or: npm run ios / npm run android
 ```
+
+`npm run windows` builds the app, installs and launches it, then syncs your
+changes into it as you save. `npm run clean` removes the build output.
 
 Use npm. `package.json` relies on npm `overrides`.
 
@@ -48,12 +68,19 @@ Use npm. `package.json` relies on npm `overrides`.
   in `src/app.css`, not `@import 'tailwindcss'`. Tailwind's preflight would
   hide every view.
 
+## Troubleshooting
+
+- **Something's missing from your setup:** `npx ns doctor windows` lists what it can't find and how to fix it.
+- **The app builds but won't launch** ("deployment failed"): turn on Developer Mode.
+- **A stale or broken build:** run `npm run clean`, then `npm run windows` again.
+
 ## Temporary workarounds
 
 These can be removed once the fixes are released:
 
-- `@nativescript/core` and `@nativescript/vite` are installed from the
-  `feat/windows` branch (`54125e1`) through pkg.pr.new.
+- `@nativescript/core` and `@nativescript/vite` are installed through pkg.pr.new from
+  [NativeScript/NativeScript#11468](https://github.com/NativeScript/NativeScript/pull/11468),
+  which is the `feat/windows` branch plus percentage sizes inside MasonKit layouts.
 - `@nativescript/windows` is pinned to an exact alpha, because a caret range
   would also match older, incompatible betas.
 - `masonkit-hmr.mjs` stops MasonKit from loading twice during HMR.
