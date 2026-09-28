@@ -1,0 +1,34 @@
+{
+  "name": "NSUniversal",
+  "main": "src/app.ts",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@nativescript/core": "https://pkg.pr.new/@nativescript/core@54125e1",
+    "@triniwiz/nativescript-masonkit": "^1.0.0-beta.101",
+    "nativescript-vue": "3.1.2",
+    "@valor/nativescript-websockets": "^2.0.2"
+  },
+  "devDependencies": {
+    "@nativescript/tailwind": "~4.0.10",
+    "@nativescript/types": "~9.1.1",
+    "@nativescript/vite": "https://pkg.pr.new/@nativescript/vite@54125e1",
+    "@nativescript/webpack": "~5.0.38",
+    "@nativescript/windows": "0.1.0-alpha.143",
+    "@types/node": "~26.5.0",
+    "@vitejs/plugin-vue": "^6.0.9",
+    "@vitejs/plugin-vue-jsx": "^5.1.6",
+    "nativescript": "9.1.2-dev.2026-09-24-36031892256",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^6.0.3",
+    "vue-tsc": "^3.3.11"
+  },
+  "overrides": {
+    "@nativescript/core": "https://pkg.pr.new/@nativescript/core@54125e1"
+  },
+  "scripts": {
+    "windows": "ns run windows",
+    "ios": "ns run ios",
+    "android": "ns run android"
+  }
+}
