@@ -5,7 +5,7 @@
   "private": true,
   "dependencies": {
     "@nativescript/core": "https://pkg.pr.new/@nativescript/core@11468",
-    "@triniwiz/nativescript-masonkit": "^1.0.0-beta.103",
+    "@triniwiz/nativescript-masonkit": "^1.0.0-beta.104",
     "@valor/nativescript-websockets": "^2.0.2",
     "nativescript-vue": "3.1.2"
   },
@@ -14,7 +14,7 @@
     "@nativescript/types": "~9.1.1",
     "@nativescript/vite": "https://pkg.pr.new/@nativescript/vite@11468",
     "@nativescript/webpack": "~5.0.38",
-    "@nativescript/windows": "^0.1.0-alpha.144",
+    "@nativescript/windows": "^0.1.0-alpha.145",
     "@types/node": "~26.5.0",
     "@vitejs/plugin-vue": "^6.0.9",
     "@vitejs/plugin-vue-jsx": "^5.1.6",
