@@ -1,4 +1,4 @@
-# NativeScript Desktop Starter
+# NativeScript Desktop Starter (Vue)
 
 A NativeScript-Vue starter that runs on Windows, iOS and Android. Layout uses
 [MasonKit](https://github.com/triniwiz/nativescript-mason) (Flexbox, CSS Grid
@@ -24,7 +24,7 @@ You don't need to install the NativeScript CLI globally. It's a dev dependency, 
 ## Getting started
 
 ```bash
-git clone https://github.com/triniwiz/nativescript-desktop-starter-template my-app
+git clone https://github.com/triniwiz/nativescript-desktop-starter-template-vue my-app
 cd my-app
 npm install
 npm run windows   # or: npm run ios / npm run android
